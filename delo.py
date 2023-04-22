@@ -22,6 +22,7 @@ def check_price(view):
             break
         else:
             url = url.replace('https://steamcommunity.com/market/listings/730/', '')
+            url = url.lstrip().rstrip() #обрезать пробелы в конце/начале строки, чтобы возвращал норм json
 
             print(f'{urllib.parse.unquote(url)} doing...')
             # параметры запроса
